@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                docker build -t ScannerApi .
+                sh 'docker build -t ScannerApi .'
             }
         }
     }
