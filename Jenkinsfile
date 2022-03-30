@@ -1,13 +1,9 @@
 pipeline {
-    agent {
-        label "linux"
-    }
+    agent none
     stages {
         stage("build") {
             steps {
-                sh """
-                    docker build -t ScannerApi .
-                """
+                docker build -t ScannerApi .
             }
         }
     }
