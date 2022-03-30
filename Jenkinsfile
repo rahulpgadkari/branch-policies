@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                build-api.bat
+                bat "docker build . -t scanapi"
             }
         }
     }
